@@ -1,0 +1,19 @@
+package in.ineuron.service;
+
+import org.springframework.stereotype.Service;
+
+import in.ineuron.dto.CustomerDTO;
+
+
+@Service("service")
+public class CustomerManagementServiceImpl implements ICustomerManagementService {
+
+	private ICustomerRepo repo;
+	
+	@Override
+	public String registerCustomer(CustomerDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,25 @@
+package in.ineuron.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ineuron.dto.CustomerDTO;
+import in.ineuron.repository.ICustomerRepo;
+
+
+@Service("service")
+public class CustomerManagementServiceImpl implements ICustomerManagementService {
+
+	
+	@Autowired
+	private ICustomerRepo repo;
+	
+	@Override
+	public String registerCustomer(CustomerDTO dto) {
+		
+		System.out.println("Get Class Name "+repo.getClass().getName());
+		
+		return null;
+	}
+
+}

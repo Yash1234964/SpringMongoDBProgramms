@@ -1,0 +1,13 @@
+package in.ineuron.service;
+
+import in.ineuron.dto.CustomerDTO;
+
+public class CustomerManagementServiceImpl implements ICustomerManagementService {
+
+	@Override
+	public String registerCustomer(CustomerDTO dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

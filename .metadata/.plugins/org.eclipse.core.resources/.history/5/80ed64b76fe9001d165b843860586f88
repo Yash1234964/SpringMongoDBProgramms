@@ -1,0 +1,28 @@
+package in.ineuron;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.ineuron.dto.CustomerDTO;
+import in.ineuron.service.ICustomerManagementService;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext applicationContext= SpringApplication.run(DemoApplication.class, args);
+		
+		ICustomerManagementService service=applicationContext.getBean(ICustomerManagementService.class);
+//		System.out.println(service.registerCustomer(null));
+		
+		System.out.println(service.registerCustomer(new CustomerDTO(18,"Kohli",110.0f)));
+		
+		
+		
+		((ConfigurableApplicationContext) applicationContext).close();
+		
+	}
+
+}
